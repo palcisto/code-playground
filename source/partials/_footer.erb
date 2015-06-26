@@ -1,0 +1,17 @@
+
+<footer role="contentinfo">
+  <div class="row">
+    <div class="large-3 medium-3 columns">
+      <p id="copyright">&copy; 2014 URBank</p>
+    </div>
+    <nav class="large-9 medium-9 columns" id="footer-nav" role="navigation">
+      <ul>
+        <li<%= " class=\"current\"" if @page_classes == "index" %>><a href="#">Home</a></li>
+        <li<%= " class=\"current\"" if @page_classes == "employee" %>><a href="#">Employee</a></li>
+        <li<%= " class=\"current\"" if @page_classes == "company" %>><a href="#">Company</a></li>
+        <li<%= " class=\"current\"" if @page_classes == "services" %>><a href="#">Services</a></li>
+        <li<%= " class=\"current\"" if @page_classes == "contact" %>><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>

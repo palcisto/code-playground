@@ -1,0 +1,465 @@
+// We use this to do clear floats
+@mixin clearfix {
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+$body-font-color:#505050;
+$primary-color: #328fc2;
+$secondary-color: #650360;
+// Media Query Ranges
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
+$screen: "only screen";
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+
+// Helper styles & overides
+
+.button {
+  background-color:#650360;
+}
+
+// Header & Nav
+
+header {
+  background-color:#328fc2;
+  margin-bottom: em-calc(45px);
+}
+#logo {
+  padding-top:3px;
+}
+#top_nav {
+  ul {
+    margin:0;
+  }
+  li {
+    font-size:1em;
+    line-height:1;
+    text-transform:lowercase;
+  }
+  a {
+    color:#fff;
+    display:block;
+    line-height:45px;
+    padding:0 20px;
+    &:hover {
+      background-color:#006899;
+      color:#fff;
+    }
+  }
+  .current {
+    a {
+      background-color:#006899;
+      color:#fff;
+      font-weight:bold;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color:#e7e8e9;
+}
+  #copyright {
+    color:#328fc2;
+    line-height:1;
+  }
+  #footer-nav {
+    ul {
+      margin:0;
+      list-style:none;
+    }
+    li {
+      float:left;
+      font-size:rem-calc(13px);
+      line-height:48px;
+      text-transform:lowercase;
+    }
+    a {
+      color:#328fc2;
+      display:inline-block;
+      line-height:1;
+      padding-left:0px;
+      padding-right:11px;
+      vertical-align:middle;
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+    .current {
+      a {
+        color:#328fc2;
+        font-weight:bold;
+        &:hover {
+          text-decoration:none;
+        }
+      }
+    }
+  }
+
+
+// Content
+h1 {
+  color:$secondary-color;
+  font-weight:300;
+  line-height:1;
+  margin-bottom:rem-calc(23px);
+}
+main {
+  section {
+    li,
+    p {
+      font-size:rem-calc(14px);
+    }
+    h3 {
+      font-size:rem-calc(14px);
+    }
+    p {
+      line-height:1.2857;
+    }
+  }
+}
+#mobile-info {
+  margin-bottom:rem-calc(50px);
+  &::after {
+    background:image-url("phone-graphic.png") 0 0 no-repeat;
+    content:" ";
+    display:block;
+    float:right;
+    height:rem-calc(176px);
+    margin-right:rem-calc(8px);
+    margin-top:rem-calc(-190px);
+    width:rem-calc(105px);
+    //position:absolute;
+  }
+  h3 {
+    color:$secondary-color;
+    font-size:rem-calc(14px);
+  }
+  p {
+    font-size:rem-calc(14px);
+    line-height:1.5;
+    padding-right:rem-calc(126px);
+  }
+}
+#rates {
+  font-weight:400;
+  margin-top:0;
+  margin-bottom:rem-calc(18px);
+  span {
+    border-right:1px solid $body-font-color;
+    display:inline-block;
+    font-weight:300;
+    margin-right:rem-calc(15px);
+    padding:rem-calc(8px 15px 8px 0);
+  }
+}
+
+// Tables
+table {
+  border-collapse:collapse;
+  .apy,
+  .earnings {
+    text-align:right;
+  }
+  .bank-name {
+    padding-left:rem-calc(15px);
+  }
+  .apy {
+    padding-right:rem-calc(10px);
+  }
+  th {
+    &.earnings {
+      padding-right:0;
+    }
+  }
+  tfoot {
+    tr {
+      td {
+        padding:rem-calc(10px 0);
+        text-align:right;
+      }
+    }
+  }
+}
+tbody {
+  tr {
+    &:first-child td {
+      font-size:rem-calc(17px);
+      font-weight:700;
+    }
+  }
+}
+
+
+// News Widget
+.widget {
+
+}
+.widget-tabs {
+  list-style:none;
+  margin:0;
+}
+.widget-tab {
+  float:left;
+  line-height:1;
+  margin-top:rem-calc(9px);
+  a {
+    background-color:#ddebe1;
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    display:block;
+    padding:8px 15px;
+  }
+  &.current {
+    margin-top:0;
+    a {
+      background-color:#f5f5f5;
+      border-right:1px solid #ccc;
+      border-top:1px solid #ccc;
+      box-shadow:inset 0 1px 0 0 #fff, inset -1px 0 0 0px #fff;
+      color:#505050;
+      height:44px;
+      padding-top:rem-calc(15px);
+    }
+  }
+}
+.widget-content {
+  background-color:#f5f5f5;
+  box-shadow:0 -1px 0 0px #fff, 0 -2px 0 0 #ccc;
+  margin-top:0px;
+  padding:15px;
+}
+.widget-title {
+  display:none;
+}
+#news_content {
+  .post {
+    h3 {
+      font-size:1em;
+      font-weight:700;
+    }
+    p {
+      font-size:0.875em;
+      line-height:1.5;
+      margin-bottom:1.6875rem;
+      margin-top:0;
+    }
+    a {}
+  }
+}
+#archive_content {
+  display:none;
+  ul {
+    list-style:none;
+    margin:0;
+  }
+  .archived-post {
+
+  }
+}
+
+// Modals
+
+.modal {
+  background-color:#fff;
+  box-shadow:0 0 10px 2px rgba(0,0,0,0.65);
+  border-radius:3px;
+  display:none;
+  height:272px;
+  padding:30px;
+  position:relative;
+  width:448px;
+  @include clearfix;
+  h1 {
+    color:#505050;
+    font-size:rem-calc(28px);
+    margin-bottom:40px;
+    margin-top:0;
+  }
+  label {
+    float:left;
+    margin:0 20px 20px 0;
+    padding:rem-calc(7px 0);
+    text-align:right;
+    width:68px;
+  }
+  input[type=text],
+  input[type=password] {
+    float:left;
+    height:35px;
+    width:300px;
+  }
+  button {
+    float:right;
+    line-height:1;
+    padding-bottom:0.5625rem;
+    width:140px;
+  }
+  .field {
+    @include clearfix;
+  }
+
+  .close {
+    background:image-url("close.png") 0 0 no-repeat;
+    cursor:pointer;
+    height:15px;
+    position:absolute;
+    right:15px;
+    top:15px;
+    width:16px;
+  }
+}
+.modal-overlay {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  display:none;
+  opacity: 0.5;
+  z-index: 9998;
+}
+
+@media #{$small-only} {
+
+  #copyright {
+    margin-bottom:0px;
+    margin-top:15px;
+  }
+  tbody {
+    tr {
+      td {
+        font-size:rem-calc(16px);
+      }
+    }
+  }
+
+  .modal {
+    padding:20px;
+    width:100%;
+    top:0 !important;
+    height:100%;
+    input[type=text],
+    input[type=password] {
+      max-width:100%;
+    }
+  }
+}
+
+@media #{$medium-up} {
+  // Header & Nav
+  header {
+    margin-bottom: em-calc(65px);
+  }
+
+  #top_nav {
+    ul {
+      float:right;
+    }
+    li {
+      float:left;
+    }
+  }
+
+  // Footer
+  footer {
+    background-color:#e7e8e9;
+  }
+    #copyright {
+      margin-top:23px;
+    }
+    #footer-nav {
+      ul {
+        float:right;
+      }
+      li {
+        font-size:rem-calc(16px);
+        line-height:58px;
+      }
+      a {
+        padding-left:20px;
+        padding-right:20px;
+      }
+    }
+
+
+  // Content
+  h1 {
+    margin-bottom:rem-calc(23px);
+  }
+  #mobile-info {
+    margin-bottom:rem-calc(50px);
+    &::after {
+      background:image-url("phone-graphic.png") 0 0 no-repeat;
+      content:" ";
+      display:block;
+      float:right;
+      height:rem-calc(176px);
+      margin-right:rem-calc(14px);
+      margin-top:rem-calc(-176px);
+      width:rem-calc(105px);
+      //position:absolute;
+    }
+    h3 {
+      color:$secondary-color;
+    }
+    p {
+      font-size:rem-calc(14px);
+      line-height:1.5;
+      padding-right:rem-calc(130px);
+    }
+  }
+
+  // Tables
+  table {
+    .bank-name {
+      padding-left:rem-calc(20px);
+    }
+  }
+  tbody {
+    tr {
+      &:first-child td {
+        font-size:rem-calc(18px);
+      }
+    }
+  }
+
+}
+
+@media #{$large-up} {
+  // Tables
+  table {
+    border-collapse:collapse;
+    .apy,
+    .earnings {
+      text-align:right;
+    }
+    .bank-name {
+      padding-left:rem-calc(20px);
+    }
+    .apy {
+      padding-right:rem-calc(10px);
+    }
+    th {
+      &.earnings {
+        padding-right:0;
+      }
+    }
+    tfoot {
+      tr {
+        td {
+          padding:rem-calc(10px 0);
+          text-align:right;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:first-child td {
+        font-size:rem-calc(18px);
+        font-weight:700;
+      }
+    }
+  }
+}
