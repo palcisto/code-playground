@@ -55,39 +55,39 @@ $('.modal a.close').click(Modal.close);
 $(window).resize(Modal.updatePosition);
 
 
-(function(){
-  var rates = {
-    "count":5,
-    "records":[{
-      "name":"Big Guy Financial",
-      "apy":"0.75",
-      "earnings":"376.41"
-    },{
-      "name":"URBank",
-      "apy":"0.87",
-      "earnings":"436.89"
-    },{
-      "name":"Dewey, Cheatam & Howe",
-      "apy":"0.01",
-      "earnings":"5.00"
-    },{
-      "name":"First Onion",
-      "apy":"0.01",
-      "earnings":"5.00"
-    },{
-      "name":"Bank of Everywhere",
-      "apy":"0.01",
-      "earnings":"5.00"
-    }]
-  }
-  // 1. Grab data
-  function() {
-    var i;
-    
-  };
+// (function(){
+//   var rates = {
+//     "count":5,
+//     "records":[{
+//       "name":"Big Guy Financial",
+//       "apy":"0.75",
+//       "earnings":"376.41"
+//     },{
+//       "name":"URBank",
+//       "apy":"0.87",
+//       "earnings":"436.89"
+//     },{
+//       "name":"Dewey, Cheatam & Howe",
+//       "apy":"0.01",
+//       "earnings":"5.00"
+//     },{
+//       "name":"First Onion",
+//       "apy":"0.01",
+//       "earnings":"5.00"
+//     },{
+//       "name":"Bank of Everywhere",
+//       "apy":"0.01",
+//       "earnings":"5.00"
+//     }]
+//   }
+
+//   // 1. Grab data
+//   // function() {
+//   //   var i;    
+//   // };
   
-  // 2. migrate each record to a row
-  $('#urbank-rates tbody').append(function(){
-    ('<tr>');
-  });
-})();
+//   // 2. migrate each record to a row
+//   $('#urbank-rates tbody').append(function() {
+//     ('<tr>');
+//   });
+// })();

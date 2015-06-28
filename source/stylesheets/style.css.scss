@@ -23,10 +23,95 @@ $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
 
 // Header & Nav
 
+.topbar {
+  overflow: hidden;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background: #328fc2;
+  margin-bottom: 0;
+
+  ul {
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  .title-area {
+    position: relative;
+    margin: 0;
+  }
+
+  .name {
+    height: 45px;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .toggle-topbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    a {
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.8125rem;
+      font-weight: bold;
+      position: relative;
+      display: block;
+      padding: 0 15px;
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+
+  .toggle-topbar.menu-icon {
+    top: 50%;
+    margin-top: -16px;
+
+    a {
+      height: 34px;
+      line-height: 33px;
+      padding: 0 40px 0 15px;
+      color: white;
+      position: relative;
+    }
+  }
+
+  .row {
+    max-width: none;
+  }
+}
+
+@media #{$medium-up} {
+  .topbar {
+    background: #328fc2;
+    overflow: visible;
+
+    .title-area {
+      float: left;
+    }
+
+    .toggle-topbar {
+      display: none;
+    }
+  } 
+}
+
 header {
   background-color:#328fc2;
   margin-bottom: rem-calc(45px);
+
+  .topbar .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 60rem;
+  }
 }
+
 #logo {
   padding-top:3px;
 }
@@ -62,10 +147,12 @@ header {
 footer {
   background-color:#e7e8e9;
 }
+
   #copyright {
     color:#328fc2;
     line-height:1;
   }
+
   #footer-nav {
     ul {
       margin:0;
@@ -107,6 +194,7 @@ h1 {
   line-height:1;
   margin-bottom:rem-calc(23px);
 }
+
 main {
   section {
     li,
@@ -121,6 +209,7 @@ main {
     }
   }
 }
+
 #mobile-info {
   margin-bottom:rem-calc(50px);
   &::after {
@@ -144,6 +233,7 @@ main {
     padding-right:rem-calc(126px);
   }
 }
+
 #rates {
   font-weight:400;
   margin-top:0;
@@ -184,6 +274,7 @@ table {
     }
   }
 }
+
 tbody {
   tr {
     &:first-child td {
