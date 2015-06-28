@@ -1,3 +1,17 @@
+# Code Playground
+
+My personal sandbox for tinkering w/ various web technologies (ie. Middleman app, JS test unit testing with Karma and Mocha, Angular, React, and more).
+### Prequisites 
+
+* ruby
+* git
+* [Node.JS](https://nodejs.org/) /[NPM](https://www.npmjs.com/)
+## Installation
+
+1. Run `$ gem install bundler`to install Bundler if you don't already have it installed
+2. Run `$ bundle install` to install Middleman and other gem dependencies
+3. Run `$ npm install` to install Unit test suite, bower, and bower packages (ie. Foundation, jQuery, AngularJs, etc.)
+
 # Middleman Template: ZURB Foundation #
 
 middleman-zurb-foundation is a minimal [Middleman](http://middlemanapp.com/) project template with the [SASS](http://sass-lang.com/) version of the [ZURB Foundation](http://foundation.zurb.com/) Framework.
