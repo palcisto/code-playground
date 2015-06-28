@@ -16,6 +16,8 @@
 # Ignore bower_components in source
 /source/bower_components
 
+/node_modules
+
 # Ignore Sass' cache
 /.sass-cache
 

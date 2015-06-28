@@ -1,0 +1,36 @@
+{
+  "name": "code-playground",
+  "version": "0.1.0",
+  "description": "coding playground for tinkering with CSS, HTML, and JS ",
+  "main": "source/index.html.erb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palcisto/code-playground.git"
+  },
+  "author": "Patrick Alcisto",
+  "bugs": {
+    "url": "https://github.com/palcisto/code-playground/issues"
+  },
+  "homepage": "https://github.com/palcisto/code-playground",
+  "dependencies": {
+    "bower": "^1.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "karma": "^0.12.37",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-ng-html2js-preprocessor": "^0.1.2",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17",
+    "protractor": "^2.1.0",
+    "sinon": "^1.15.3",
+    "sinon-chai": "^2.8.0"
+  },
+  "scripts": {
+    "postinstall": "bower install && npm install -g karma-cli"
+  }
+}
