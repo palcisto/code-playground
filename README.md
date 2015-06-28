@@ -6,7 +6,8 @@ My personal sandbox for tinkering w/ various web technologies (ie. Middleman app
 * ruby
 * git
 * [Node.JS](https://nodejs.org/) /[NPM](https://www.npmjs.com/)
-* 
+
+
 ## Installation
 
 1. Run `$ gem install bundler`to install Bundler if you don't already have it installed
