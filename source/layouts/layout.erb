@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="app">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,11 +11,17 @@
   </head>
 
   <body class="<%= @page_classes %>">
-    <%= partial "partials/header" %>
-    <%= yield %>
-    <%= partial "partials/footer" %>
+    <%# partial "partials/header" %>
+    <global-header></global-header>
+
+    <div ui-view>
+      
+    </div>
+
+    <global-footer></global-footer>
+    <%# partial "partials/footer" %>
     <%= partial "partials/modal" %>
-    
+
     <%= javascript_include_tag  "all" %>
   </body>
 </html>

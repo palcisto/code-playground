@@ -1,11 +1,12 @@
 # Code Playground
 
 My personal sandbox for tinkering w/ various web technologies (ie. Middleman app, JS test unit testing with Karma and Mocha, Angular, React, and more).
-### Prequisites 
+## Prequisites 
 
 * ruby
 * git
 * [Node.JS](https://nodejs.org/) /[NPM](https://www.npmjs.com/)
+
 ## Installation
 
 1. Run `$ gem install bundler`to install Bundler if you don't already have it installed

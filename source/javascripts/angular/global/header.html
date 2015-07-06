@@ -1,5 +1,3 @@
-
-
 <header class="hide-for-small-only" role="banner">
   <div class="topbar" data-topbar>
     <div class="row">
@@ -13,11 +11,11 @@
       </div>
       <nav class="large-9 medium-9 columns" id="top_nav" role="navigation">
         <ul>
-          <li ng-class="{active: $state.includes('home')}"><a href="#/">Home</a></li>
-          <li ng-class="{active: $state.includes('employee')}"><a href="#/employee">Employee</a></li>
-          <li ng-class="{active: $state.includes('company')}"><a href="#/company">Company</a></li>
-          <li ng-class="{active: $state.includes('services')}"><a href="#/services">Services</a></li>
-          <li ng-class="{active: $state.includes('contact')}"><a href="#">Contact</a></li>
+          <li ng-class="{current: currentState === 'home'}"><a href="#/">Home</a></li>
+          <li ng-class="{current: currentState === 'employee'}"><a href="#/employee">Employee</a></li>
+          <li ng-class="{current: currentState === 'company'}"><a href="#/company">Company</a></li>
+          <li ng-class="{current: currentState === 'services'}"><a href="#/services">Services</a></li>
+          <li ng-class="{current: currentState === 'contact'}"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -37,11 +35,11 @@
       </div>
       <nav class="large-9 medium-9 columns" id="top_nav" role="navigation">
         <ul>
-          <li ng-class="{active: $state.includes('home')}"><a href="#/">Home</a></li>
-          <li ng-class="{active: $state.includes('employee')}"><a href="#/employee">Employee</a></li>
-          <li ng-class="{active: $state.includes('company')}"><a href="#/company">Company</a></li>
-          <li ng-class="{active: $state.includes('services')}"><a href="#/services">Services</a></li>
-          <li ng-class="{active: $state.includes('contact')}"><a href="#">Contact</a></li>
+          <li ng-class="{current: currentState === 'home'}"><a href="#/">Home</a></li>
+          <li ng-class="{current: currentState === 'employee'}"><a href="#/employee">Employee</a></li>
+          <li ng-class="{current: currentState === 'company'}"><a href="#/company">Company</a></li>
+          <li ng-class="{current: currentState === 'services'}"><a href="#/services">Services</a></li>
+          <li ng-class="{current: currentState === 'contact'}"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>

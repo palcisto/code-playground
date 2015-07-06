@@ -15,8 +15,15 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'http://localhost:4567/javascripts/all.js',
       'source/javascripts/**/*.js',
-      'test/**/*_spec.js'
+      'test/**/*_spec.js',
+      {
+        pattern: 'source/javascripts/**/*.js',
+        watched: true,
+        included: false,
+        served: false
+      }
     ],
 
 
@@ -56,7 +63,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'PhantomJS'],
+    browsers: ['Chrome'], //, 'PhantomJS'
 
 
     // If browser does not capture in given timeout [ms], kill it
